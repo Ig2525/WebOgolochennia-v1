@@ -1,0 +1,109 @@
+﻿@model WebOgolochennia_v1.Models.CategoryCreateViewModels
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Додати оголошення</h1>
+
+@*<h4>CategoryCreateViewModels</h4>*@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+           @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                @*<span asp-validation-for="Name" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label asp-for="Advertisement" class="control-label"></label>
+                <input asp-for="Advertisement" class="form-control" />
+                @*<span asp-validation-for="Advertisement" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                @*<span asp-validation-for="Price" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label asp-for="Tel1" class="control-label"></label>
+                <input asp-for="Tel1" class="form-control" />
+                @*<span asp-validation-for="Tel1" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label asp-for="Tel2" class="control-label"></label>
+                <input asp-for="Tel2" class="form-control" />
+                @*<span asp-validation-for="Tel2" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label asp-for="Other" class="control-label"></label>
+                <input asp-for="Other" class="form-control" />
+               @* <span asp-validation-for="Other" class="text-danger"></span>*@
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="PublicInNewspaper" /> @Html.DisplayNameFor(model => model.PublicInNewspaper)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="InicialData" class="control-label"></label>
+                <input asp-for="InicialData" class="form-control" />
+                @*<span asp-validation-for="InicialData" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label asp-for="FinalData" class="control-label"></label>
+                <input asp-for="FinalData" class="form-control" />
+                @*<span asp-validation-for="FinalData" class="text-danger"></span>*@
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Highlighted" /> @Html.DisplayNameFor(model => model.Highlighted)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Frame" /> @Html.DisplayNameFor(model => model.Frame)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Background" /> @Html.DisplayNameFor(model => model.Background)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="PublicInSite" /> @Html.DisplayNameFor(model => model.PublicInSite)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="InitialWeek" class="control-label"></label>
+                <input asp-for="InitialWeek" class="form-control" />
+                @*<span asp-validation-for="InitialWeek" class="text-danger"></span>*@
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Up" /> @Html.DisplayNameFor(model => model.Up)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Paid" /> @Html.DisplayNameFor(model => model.Paid)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Додати оголошення" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Повернутися до списку</a>
+</div>
+
+@*
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@
